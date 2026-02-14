@@ -36,11 +36,5 @@ public class Appointment {
         this.fee = fee;
     }
 
-    public Patient getPatient() {
-        return patient;
-    }
-
-    public void setPatient(Patient patient) {
-        this.patient = patient;
-    }
+   
 }
