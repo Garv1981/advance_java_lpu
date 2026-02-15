@@ -1,6 +1,6 @@
 package com.prac;
 import javax.persistence.*;
-
+import java.util.*;
 
 public class AppointmentDAO {
 	private EntityManager em;
@@ -23,4 +23,9 @@ public class AppointmentDAO {
 	        }
 	        em.getTransaction().commit();
 	    }
+	 
+	 public List<Appointment> findAppointmentByDoctor(int doctorId) {
+		    Doctor d = em.find(Doctor.class, doctorId);
+		    return d.getAppointments();
+		}
 }

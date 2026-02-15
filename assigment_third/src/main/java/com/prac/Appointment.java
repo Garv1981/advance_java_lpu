@@ -16,7 +16,15 @@ public class Appointment {
     @ManyToOne(cascade = CascadeType.ALL)
     private Patient patient;
 
-    public int getId() {
+    public Patient getPatient() {
+		return patient;
+	}
+
+	public void setPatient(Patient patient) {
+		this.patient = patient;
+	}
+
+	public int getId() {
         return id;
     }
 
