@@ -1,50 +1,30 @@
 package com.prac;
-
+import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
-public class programTest {
-	
-		// TODO Auto-generated method stub
-		@ParameterizedTest
-		@ValueSource(strings= {"tenet","radar","aba"})
-		public void isPalindromeTest(String str) {
-			program p=new program(); 
-			assertTrue(p.isPalindrome(str));	
-		}
-		
-		@ParameterizedTest
-		@ValueSource(ints = {1,2,-23,-54,99})
-		public void isPositiveTest(int n) {
-			program p=new program(); 
-			assertTrue(p.isPositive(n));	
-		}
-		
-		@ParameterizedTest
-		@CsvSource({
-			"1,2,3",
-			"5,5,10",
-			"5,3,8"
-		})
-		public void addTest(int a,int b,int expectedResult) {
-			program p=new program();
-			int actualres=p.add(a,b);
-			assertEquals(expectedResult,actualres);
-		}
-		
-		
-		@ParameterizedTest
-		@CsvFileSource(resources="/junitTestExcel.csv",numLinesToSkip=1)
-		public void EvenOddTest(String input,String expected) {
-			program p=new program();
-			String actualres=p.isEvenOrOdd(Integer.parseInt(input));
-			assertEquals(expected,actualres);
-			
-		}
-		
-		
+import org.junit.jupiter.api.Test;
 
+class programTest {
+
+	@Test
+	void test() {
+		program p = new program();
+		assertEquals(5,p.add(3, 2));
+	}
+	
+	@Test
+	void test2() {
+		program p = new program();
+		assertEquals(false,p.isPalindrome("Java"));
+	}
+
+	@Test
+	void Test3(){
+		int arr[] = {1,2,3,4};
+		int num[] = {1,2,3,4};
+		
+		assertArrayEquals(arr,num);
+		
+		
+	}
 }
