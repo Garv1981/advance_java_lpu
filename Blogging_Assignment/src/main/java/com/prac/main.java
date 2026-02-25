@@ -10,9 +10,9 @@ public class main {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("blog-unit");
         EntityManager em = emf.createEntityManager();
 
-        UserService us = new UserService(em);
-        PostService ps = new PostService(em);
-        CommentService cs = new CommentService(em);
+        User us = new User();
+        Post ps = new Post();
+        Comment cs = new Comment();
 
         em.close();
         emf.close();
