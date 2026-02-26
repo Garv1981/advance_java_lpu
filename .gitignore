@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .metadata/
 =======
+=======
+>>>>>>> 88bcdc74b4f2d57fb977987e1d9d8b177c081266
 # Eclipse files
 .metadata/
 .settings/
@@ -20,4 +23,10 @@ target/
 # OS junk
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
 >>>>>>> 0905e0b1388019e67d1bfc0825af3ed991537271
+=======
+=======
+.metadata/
+>>>>>>> e27a3b298dce6133f3017cd614b829090e735fb6
+>>>>>>> 88bcdc74b4f2d57fb977987e1d9d8b177c081266
