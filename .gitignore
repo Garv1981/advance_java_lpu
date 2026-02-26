@@ -1,1 +1,23 @@
+<<<<<<< HEAD
 .metadata/
+=======
+# Eclipse files
+.metadata/
+.settings/
+.project
+.classpath
+
+# Build folders
+bin/
+target/
+
+# Compiled files
+*.class
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+>>>>>>> 0905e0b1388019e67d1bfc0825af3ed991537271
