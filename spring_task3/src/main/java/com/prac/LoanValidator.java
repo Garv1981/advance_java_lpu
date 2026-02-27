@@ -1,5 +1,6 @@
 package com.prac;
 
-public class LoanValidator {
 
+public interface LoanValidator {
+    void validateLoan(double amount);
 }
