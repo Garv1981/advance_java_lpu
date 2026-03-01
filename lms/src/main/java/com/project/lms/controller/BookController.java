@@ -1,0 +1,31 @@
+package com.project.lms.controller;
+
+import com.project.lms.entity.Book;
+import com.project.lms.service.BookService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/v1/books")
+@RequiredArgsConstructor
+public class BookController {
+
+    private final BookService bookService = null;
+
+    @PostMapping
+    public Book addBook(@RequestBody Book book) {
+        return bookService.addBook(book);
+    }
+
+    @GetMapping
+    public List<Book> getAllBooks() {
+        return bookService.getAllBooks();
+    }
+
+    @GetMapping("/{id}")
+    public Book getBookById(@PathVariable Long id) {
+        return bookService.getBookById(id);
+    }
+}
